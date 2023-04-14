@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Target</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <div class="top-bar">
+        <h1> Desafios Target Sistemas</h1>
+        <a href="" id="fibo"> Sequência de Fibonacci </a>
+        <a href="#faturamentoJson"> Faturamento Mensal </a>
+        <a href="#faturamentoEstado"> Faturamento Mensal Por Estados </a>
+        <a href="#inversaoString"> Inversão de String </a>
+    </div>
+
+        <div id="fibonnaci" class="container">
+          <h2>Verificar número na sequência de Fibonacci</h2>
+          <form>
+            <label for="num">Informe um número:</label>
+            <input type="number" id="numero" name="num">
+            <button type="button"  onclick="verificaFibonacci()" id="btn">Verificar</button>
+          </form>
+          <p id="result"></p>
+        </div>
+
+        <div id="faturamentoJson" class="container">
+            <h2> Detalhes Faturamento Mensal(JSON)</h2>
+                <table>
+                <thead>
+                    <tr>
+                    <th>Dia</th>
+                    <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-faturamento">
+                </tbody>
+                </table>
+             <h2>Informações do Faturamento</h2>
+                <p>Menor valor: <span id="menor-valor"></span></p>
+                <p>Maior valor: <span id="maior-valor"></span></p>
+                <p>Número de dias com faturamento acima da média: <span id="dias-acima-media"></span></p>
+                <button type="button" onclick="exibirInformacoes()">Exibir informações</button>
+        </div>
+        <br>
+        <br>
+
+        <div id="faturamentoEstado" class="container">
+            <h2 > Detalhes Faturamento Mensal Por Estados: </h2>
+            <h3> Faturamento em R$: </h3>
+            <div>SP: R$67.836,43 <span id="spstatic"></span></div>
+            <div>RJ: R$36.678,66 <span id="rjstatic"></span></div>
+            <div>MG: R$29.229,88 <span id="mgstatic"></span></div>
+            <div>ES: R$27.165,48 <span id="esstatic"></span></div>
+            <div>Outros: R$19.849,53 <span id="outrosstatic"></span></div>
+            
+            <h3> Porcentagem faturamento: </h3>
+            <div>SP: <span id="sp"></span></div>
+            <div>RJ: <span id="rj"></span></div>
+            <div>MG: <span id="mg"></span></div>
+            <div>ES: <span id="es"></span></div>
+            <div>Outros: <span id="outros"></span></div>
+            <br>
+
+            <button type="button" onclick="exibirFaturamentoPorcento()">Exibir porcentuais </button>
+
+        </div>
+
+        <div id="inversaoString" class="container">
+
+            <h2> Inversão de String </h2>
+            <input type="text" id="inputString">
+            <br>
+            <button type="button" onclick="reverseString()">Inverter String</button>
+            <br>
+            <p id="output"></p>
+
+        </div>
+
+        <div class="footer">
+            <p> Desenvolvido por <a href="https://www.linkedin.com/in/mendesnkevin" target="_blank">Kevin Mendes</a>, para desafio Target Sistemas.</p>
+        </div>
+</body>
+</html>
